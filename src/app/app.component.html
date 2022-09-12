@@ -9,10 +9,10 @@
     placeholder="ingrese nombre de usuario"
     [(ngModel)]="nombre"
   />
-  <!-- aqui hereda del padre la propiedad nombre -->
+  <!-- aqui hereda del padre la propiedad nombre 
   <app-saludo [nombre]="nombre"></app-saludo>
-  <!-- aqui no hereda la propiedad del padre sino que sera en hardcodeado -->
+  aqui no hereda la propiedad del padre sino que sera en hardcodeado
   <app-saludo nombre="nombre"></app-saludo>
-  <!-- y aqui no se le pasara propiedades,en tal caso usaria la propiedad por defecto de su typescript -->
-  <app-saludo></app-saludo>
+  y aqui no se le pasara propiedades,en tal caso usaria la propiedad por defecto de su typescript -->
+  <app-saludo (mensajeEmitter)="recibirMensajeDelHijo($event)"></app-saludo>
 </div>
